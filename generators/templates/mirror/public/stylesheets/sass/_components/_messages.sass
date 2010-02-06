@@ -1,0 +1,30 @@
+@import ../_colors/_all
+
+=message_box
+  :padding 5px 8px
+  :margin 10px 0
+  :text-align center
+
+=notice
+  :background-color #CFC
+  :color = !notice_color
+  :border
+    :style solid
+    :width 1px
+    :color = !notice_border_color
+
+=error
+  :background-color = !error_background_color
+  :color = !error_color
+  :border
+    :style solid
+    :width 1px
+    :color = !error_border_color
+
+#flash_notice
+  +message_box
+  +notice
+
+#flash_error
+  +message_box
+  +error

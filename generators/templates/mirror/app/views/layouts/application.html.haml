@@ -1,0 +1,35 @@
+!!! XML
+!!! Strict
+%html{html_attrs}
+  %head
+    %title
+      = h(yield(:title) || "Untitled")
+    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
+    %meta{ :name => "description", :content=> h(yield(:description))}/
+    %meta{ :name => "keywords",    :content=> to_keywords(h(yield(:title)))}/
+    %meta{ :name => "robots",      :content=> "index, follow"}/
+    = stylesheet_link_tag default_stylesheets
+    = yield(:head)
+  %body
+    #container
+      #hd
+        %h1
+          =h yield(:title)
+        #login
+          = link_to "Anmelden", "#"
+          |
+          = link_to "Registrieren", "#"
+        %div.clear
+        #flashes
+          - flash.each do |name, msg|
+            = content_tag :div, msg, :id => "flash_#{name}"
+      #bd
+        #main
+          = yield
+        #sidebar
+          = yield(:sidebar)
+    #ft
+      = yield(:footer)
+      %p.copyright
+        Copyright &copy;
+        = Time.now.year
