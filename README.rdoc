@@ -1,9 +1,14 @@
 = grid-layout
 
-Description goes here.
+This Project was intended to replace the nifty_layout part of Ryan Bates great nifty-generators.
+I took 960.gs, and created macros like compass does, but only for the very basic stuff.
+It's as minimalistic as 960.gs, that's why it should get out of your way.
+
+I added maybe a little bit too much regarding directory structure.
+But it fits my needs somehow.
 
 == Note on Patches/Pull Requests
- 
+
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a
