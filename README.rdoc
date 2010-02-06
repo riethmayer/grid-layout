@@ -7,6 +7,15 @@ It's as minimalistic as 960.gs, that's why it should get out of your way.
 I added maybe a little bit too much regarding directory structure.
 But it fits my needs somehow.
 
+== Usage
+
+0. gem install grid-layout
+1. create your rails project (rails foo)
+2. go into foo (cd foo)
+3. haml --rails . (activate haml for rails)
+4. script/generate grid_layout
+
+
 == Note on Patches/Pull Requests
 
 * Fork the project.
